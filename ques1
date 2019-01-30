@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int start = 1;
+   int end = 100;
+   for(int i=start; i<end; i++){
+       if(i%3 == 0 && i%7 == 0){
+           cout<<"OpenSource"<<endl;
+           continue;
+       }
+       else if(i%7 == 0){
+           cout<<"Source"<<endl;
+           continue;
+       }
+       else if(i%3 == 0){
+           cout<<"Open"<<endl;
+           continue;
+       }
+       else{
+           cout<<i<<endl;
+       }
+    }
+   return 0;
+}
