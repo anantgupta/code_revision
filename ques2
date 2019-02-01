@@ -32,8 +32,11 @@ int main()
 {
     int number = 9657;
     for(int i=0;i<50;i++){
-        cout<<verify(number)<<endl;
-        
+        guess = verify(number);
+        cout<<guess<<endl;
+        if(guess==0){
+            i=50;
+        }
     }
     
    
