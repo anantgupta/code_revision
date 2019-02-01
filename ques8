@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <regex>
+using namespace std;
+int match(char text[]){
+    if (std::regex_match (text, std::regex("(.*)(Odoo)(.*)(\#rules)(.*)"))){
+        return 0;
+    }
+    else if (std::regex_match (text, std::regex("(.*)(\#rules)(.*)(Odoo)(.*)"))){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
+int main()
+{
+
+    char exampleText[] = "OddoOdootetct#rulesbc";
+    if(match(exampleText)==1){
+        cout<<"Not matched";
+    }
+    else{
+        cout<<"matched";
+    }
+   return 0;
+}
